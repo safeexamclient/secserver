@@ -1,0 +1,383 @@
+@media (min-width:768px) and (max-width: 991px) {
+  body {
+    padding-top: 100px;
+  }
+  
+  .sebnavbar-link {
+    padding-top: 108px!important;
+    margin-top: -108px!important;
+  }
+  
+  .seb-section-header.sebnavbar-link {
+	  padding-top: 123px!important;
+	  margin-top: -108px!important;
+  }
+
+}
+
+@media (max-width: 991px) {
+  /* Show all (even inactive) nested list items */
+  .bs-docs-sidebar .nav ul.nav {
+	  display: block;           
+  }
+  .bs-docs-sidebar {
+	padding-top: 0px;
+	padding-bottom: 30px;
+  }
+  /* all links */
+  .bs-docs-sidebar .nav>li>a {
+	  font-size: 14px;
+  }
+  
+  /* nested links */
+  .bs-docs-sidebar .nav .nav>li>a {
+	  font-size: 14px;
+  }
+}
+
+@media print {
+  /* Show all (even inactive) nested list items */
+  .bs-docs-sidebar .nav ul.nav {
+	  display: block;           
+  }
+}
+
+tr>td>a {
+	font-weight: normal;  /* ChenGuang Edit: bold -> normal  */
+}
+
+.tbody-highlight tr:hover { background: #f8f8f8; } /* ChenGuang Add  */
+
+pre p {
+	margin-top: -10px;!important;
+	margin-bottom: -30px;!important;
+    white-space:nowrap;
+}
+
+.breadcrumb>li+li:before {
+	content:"|\00a0"
+	}
+
+.bs-docs-sidebar {
+  z-index: 1;
+}
+
+/*Header formatting */
+.MainContent {
+    margin-top: 50px;
+}
+
+.seb-section-header {
+    margin-top: 1.65em;
+}
+
+.sebnavbar-link {
+    padding-top: 58px;
+    margin-top: -58px;
+}
+
+.seb-section-header.sebnavbar-link {
+    padding-top: 73px;
+    margin-top: -58px;
+}
+
+.ontop {
+	z-index:2;
+}
+
+.no_overflow {
+	display: block;
+}
+
+.sebbrandimg {
+    margin-top:-10px;
+	vertical-align:top;
+}
+
+.sebnavbar-brand {
+    margin:0;
+    display: inline-block;
+}
+
+.sebnavbar-background {
+	background-image: url("../images/app_head_bg_c090.jpg")!important; 
+}
+
+.sebnavbar-background-dark {
+	background-color: #E9933F!important;
+}
+
+.navbar .logo {
+    width: 40px;
+}
+
+.seb-table-header {
+	padding-top: 1em!important;
+	padding-bottom: 1em!important;
+}
+
+.btn-responsive {
+    white-space: normal !important;
+}
+
+.seb-button-icon {
+    vertical-align: middle!important;
+	font-size:1.5em;
+}
+.seb-icntxt-button a {
+	position:relative;
+	top:0.1em;
+}
+.seb-button-text {
+	position:relative;
+	top:0.1em;
+	font-weight:normal;
+}
+
+#half_linespace {
+	margin-bottom: 0.5em;
+}
+#quarter_linespace {
+	margin-bottom: 0.25em;
+}
+#full_linespace {
+	margin-bottom: 1em;
+}
+.no_linespace {
+	margin-bottom: 0em;
+}
+.command_linespace {
+	margin: 0.25em 0 0.33em 0;
+	line-height: 16px;
+}
+.path {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #555;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 16px;
+	white-space: nowrap;
+}
+.sourcecode {
+	color: #444;
+	font-size: 12px;
+	font-family: Courier, Consolas, monospace;
+	line-height: 14px;
+	background-color: #d4d4d4;
+	word-break: break-all;
+	margin: 0.25em 0 0.25em 0;
+}
+#codeblock {
+	margin-top: 0em;
+	margin-bottom: 1em;
+	word-break: break-all;
+}
+.codetext {
+	font-family: Courier, Consolas, monospace;
+	color: #555;
+	font-size: 13px;
+}
+.indent1 {
+	text-indent: 20px;
+}
+.margin1 {
+	margin-left: 20px;
+}
+.indent2 {
+	text-indent: 40px;
+}
+.indent3 {
+	text-indent: 60px;
+}
+.indent4 {
+	text-indent: 80px;
+}
+.indent5 {
+	text-indent: 100px;
+}
+.indent6 {
+	text-indent: 120px;
+}
+#sebh5 {
+	margin-bottom: 0.5em;
+	margin-top: 2em;
+}
+#seblist ul {
+	margin: 0.5em 0 1em -1.5em;
+}
+#seblist li {
+	margin-bottom: 0.5em;
+	line-height: 1.25em;
+}
+ol.seblist>li {
+	margin-bottom: 10px;
+}
+#seblist ul li ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#seblist ul li ul li {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+@media (max-width: 544px) {
+.sebtable tr th:nth-of-type(2) {
+	display: none;
+}
+.sebtable tr th:nth-of-type(3) {
+	display: none;
+}
+.sebtable tr td:nth-of-type(2) {
+	display: none;
+}
+.sebtable tr td:nth-of-type(3) {
+	display: none;
+}
+}
+.textsubnavi { color: #070782; font-size: 10pt; font-weight: bold; text-decoration: none; }
+.linksubnavi { color: #6a8ccf; font-size: 10pt; font-weight: bold; text-decoration: none; }
+.textmainnavi { color: #494949; font-size: 11pt; font-weight: bold; }
+#tablecell {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#container #content #releases tr td {
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: top;
+}
+
+#container p {
+	line-height: 1.8;
+}
+.red {
+	color: #F00;
+}
+
+.mac_prefs_screenshot {
+	margin-top: -32px;
+	margin-bottom: -80px;
+	margin-left: -08.6%;
+	margin-right: -08.6%;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.bs-docs-section>img.img-responsive {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+.image1 {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	border: 1px solid #999;
+}
+.image2 {
+	position: relative;
+	left: -27px;
+	top: -15px;
+	margin-bottom: -55px;
+}
+.image3 {
+	position: relative;
+	left: -78px;
+	top: -15px;
+	margin-bottom: -60px;
+}
+.image4 {
+	position: relative;
+	left: -102px;
+	top: -15px;
+	margin-bottom: -60px;
+}
+.image5 {
+	position: relative;
+	left: -45px;
+	top: 0px;
+	margin-bottom: 0px;
+}
+.image_memberlogos {
+	width: 140px;
+	margin-bottom: 10px;
+}
+.image_memberlogos_medium {
+	width: 210px;
+	margin-bottom: 20px;
+}
+.image_memberlogos_wide {
+	width: 280px;
+	margin-bottom: 10px;
+}
+.image_memberlogo_TUVSA {
+	width: 140px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+	margin-top: -8px;
+}
+.image-only {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+.podcastbox {
+	height: 300px;
+	width: 300px;
+}
+.imagecaption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #555;
+	font-weight: bold;
+	margin: 0em 0em 2em 0em;
+	line-height: 1.25em;
+}
+.caption_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #555;
+	font-weight: bold;
+	line-height: 1.25em;
+}
+.normal_line_height {
+	line-height: 16px;
+}
+.link_small {
+	font-size: 10px;
+	font-family: sans-serif;
+	font-weight: bold;
+	line-height: 12px;
+}
+.textklein {
+	font-size: 9px;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+#title_table {
+}
+.quote {
+	font-weight: bold;
+	color: #666;
+}
+.quarter_linespace {
+	margin-bottom: 0.25em;
+}
+.half_linespace {
+	margin-bottom: 0.5em;
+}
+.list_regular {
+	font-size: 13px;
+	font: Arial, Helvetica, sans-serif;
+}
+.header-white {
+	font-size: 25px;
+	font-weight: normal;
+	color: #FFF;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
