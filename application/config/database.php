@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['production'] = array(
 	'dsn'	=> '',
-	'hostname' => 'rm-2zef21m7v38015r35.mysql.rds.aliyuncs.com',
-	'username' => 'ats',
-	'password' => '******', //公开场合密码隐藏 20210512 ChenGuang
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'secdb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

@@ -10,7 +10,7 @@ if(! function_exists('my_encode') ) {
 		$rand_key=md5($key);
 		$reslutstr = "";
 		for ($i = 0; $i < $textlen; $i++) {
-			$reslutstr.=$text{$i} ^ $rand_key{$i % 32};
+			$reslutstr.=$text[$i] ^ $rand_key[$i % 32];
 		}
 		$reslutstr = trim(base64_encode($reslutstr), "==");
 		$reslutstr = $key.substr(md5($reslutstr), 0, 3) . $reslutstr;
@@ -33,7 +33,7 @@ if(! function_exists('my_decode') ) {
 		$reslutstr = ""; 
 		$rand_key=md5($key); 
 		for($i = 0; $i < $textlen; $i++) {
-			$reslutstr.=$text{$i} ^ $rand_key{$i % 32}; 
+			$reslutstr.=$text[$i] ^ $rand_key[$i % 32]; 
 		} 
 		return $reslutstr; 
 	}

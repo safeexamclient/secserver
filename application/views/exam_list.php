@@ -19,9 +19,9 @@
                 <tr style="background-color: #f8f8f8; ">
                     <td nowrap>序号</td>
                     <td>考试名称</td>
-                    <td>考试网址</td>
-                    <td nowrap>是否锁屏</td>
+                    <td>考试网址</td>                    
                     <td nowrap>考试口令</td>
+                    <td nowrap>是否锁屏</td>
                     <td nowrap>创建时间</td>
                     <td nowrap>操作</td>
                 </tr>                
@@ -33,8 +33,8 @@
                     <td><?php echo $n--; ?></td>
                     <td style="text-align:left;"><?php echo $exam["exam_name"]; ?></td>
                     <td style="text-align:left;"><?php echo $exam["exam_url"]; ?></td>
+                    <td nowrap><?php echo $exam["exam_key"]; ?></td>
                     <td nowrap style="text-align:center;"><?php echo $exam["exam_lock"]==1 ? 'Yes':'No'; ?></td>
-                    <td nowrap><?php echo $exam["exam_id"]; ?></td>
                     <td nowrap><?php echo $exam["create_time"]; ?></td>
                     <td nowrap>
                       <a href="/exam/edit/<?php echo $exam["exam_id"]; ?>">修改</a> &nbsp;&nbsp; 

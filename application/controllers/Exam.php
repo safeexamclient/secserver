@@ -63,9 +63,10 @@ class Exam extends BA_Controller {
 		if(empty($exam_id)){
 			//空置1项
 			$exam['exam_id'] = '' ;
-			//基本2项
+			//基本3项
 			$exam['exam_name'] = '' ;
 			$exam['exam_url'] = '' ;
+			$exam['exam_key'] = '' ;
 			//锁屏4项
 			$exam['exam_lock'] = 1 ;
 			$exam['exam_lock_on_key'] = '' ;
@@ -108,6 +109,7 @@ class Exam extends BA_Controller {
 		//Step2：获取表单信息
 		$data['exam_name'] = trim($this->input->post('exam_name', true));
 		$data['exam_url'] = trim($this->input->post('exam_url', true));
+		$data['exam_key'] = trim($this->input->post('exam_key', true));
 
 		//默认checkbox的返回值是on，但数据库中存的是0和1，故需要转义
 		$data['exam_lock'] = empty($this->input->post('exam_lock', true)) ? 0:1 ; 
@@ -127,8 +129,17 @@ class Exam extends BA_Controller {
 		$data['exam_shield_visualbox'] = empty($this->input->post('exam_shield_visualbox', true)) ? 0:1 ;
 		*/
 
+		//检查考试口令是否存在
+        $is_exist_exam_key = $this->exam_model->check_exist_exam_key($data['exam_key']);
+        
+
 		//Step3：新增操作
 		if(empty($exam_id)){
+			//检查考试口令是否存在
+			if($is_exist_exam_key){
+	        	$this->show_msg('输入有误：该考试口令已经存在，请换一个', 'javascript:history.back();');
+	            return;
+	        }
 			$data['user_id'] = $this->user_id;
 			$data['create_time'] = date("Y-m-d H:i");
 			$insert_result = $this->exam_model->insert( $data ); //######### 还需要检验权限
@@ -145,6 +156,12 @@ class Exam extends BA_Controller {
 		}
 
 		//Step4：更新操作
+		$curr_exam_key = $this->exam_model->get_field_by_id("exam_key",$exam_id); //得到 exam_key
+		if( ($data['exam_key'] != $curr_exam_key) && $is_exist_exam_key ){ //如果口令有修改且重复
+			$this->show_msg('输入有误：修改后的考试口令存在冲突，请换一个', 'javascript:history.back();');
+	        return;
+		}
+
 		$update_result = $this->exam_model->update( $exam_id, $data ); //######### 还需要检验权限
 		if($update_result){
 				$this->show_msg_js("成功，考试信息修改完成", "/exam");
@@ -176,7 +193,7 @@ class Exam extends BA_Controller {
         	return;
 		}
 		$exam_name = $exam['exam_name'];
-		$this->show_msg("成功，[ ".$exam_name." ] 创建完成，考试口令是 <strong>".$exam_id."</strong>", "/exam",'succ','确认'); 
+		$this->show_msg("成功，[ ".$exam_name." ] 创建完成", "/exam",'succ','确认'); 
 	}
 
 }

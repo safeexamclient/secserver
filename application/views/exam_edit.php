@@ -32,7 +32,15 @@
                         <span style="color:red;">*</span> 
                         <div style="font-size: 13px; color:#ccc; margin-top: 5px;">( 示例：https://www.baidu.com，最多100个字符 )</div>
                     </td>
-                </tr>                
+                </tr>   
+                <tr style="vertical-align: text-top; ">
+                    <td>考试口令： </td>
+                    <td>
+                        <input type="text" style="width: 210px;" id="exam_key" name="exam_key" value="<?php echo $exam["exam_key"]; ?>" maxlength="6"> 
+                        <span style="color:red;">*</span> 
+                        <div style="font-size: 13px; color:#ccc; margin-top: 5px;">( 示例：TK1001，6位大写字母或数字，且必须是以大写字母开头 )</div>
+                    </td>
+                </tr>                              
             </table>
 
             <div id="more-setting" style="display:none;">
@@ -114,6 +122,24 @@
               $('#exam_url').focus();
               return false;
             }  
+            var key = $('#exam_key').val().trim();
+            if(key.length != 6){
+              alert('[ 考试口令 ] 输入有误，必须是6位，请重新输入');
+              $('#exam_key').focus();
+              return false;
+            }
+            var reg = /^[A-Z0-9]*$/; //正则表达式，判断字母或数字
+            if(!reg.test(key)){
+              alert('[ 考试口令 ] 输入有误，必须是大写字母或数字，请重新输入');
+              $('#exam_key').focus();
+              return false;
+            }
+            var key_head = key.substring(0,1);
+            if(key_head > 'Z' || key_head < 'A' ){
+              alert('[ 考试口令 ] 的第一个字符必须是大写字母，请重新输入');
+              $('#exam_key').focus();
+              return false;
+            } 
             $('#form1').submit()
       });
 

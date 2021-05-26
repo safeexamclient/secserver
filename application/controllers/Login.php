@@ -32,26 +32,25 @@ class Login extends MY_Controller {
 	{
 		//获取FORM表单值
 		$key = strtolower(trim($this->input->post('key',true )));
-		//考试口令其实就是exam_id
 		header("Location: /login/exam/".$key);
 	}
 
 	/* 考生输入考试口令（业务处理） */
-	public function exam($exam_id=0)
+	public function exam($exam_key="")
 	{
 		$code = 1;
 		$message = 'success';
 		$time =  date("Y-m-d H:i:s");
 		$exam = null;
 
-		if(strlen($exam_id) != 6){
+		if(strlen($exam_key) != 6){
 			$code = 1001;
-			$message = '输入有误：考试口令必须是6位数字';            
+			$message = '输入有误：考试口令必须是6位';            
         }else{    
-	        $exam = $this->exam_model->get_row( $exam_id );
+	        $exam = $this->exam_model->get_exam_by_key($exam_key);
 	        if(empty($exam)){
 	        	$code = 1002;
-				$message = '输入有误：参数有误，该考试不存在';  
+				$message = '输入有误：考试口令有误，该考试不存在';  
 			}
 		}
 		

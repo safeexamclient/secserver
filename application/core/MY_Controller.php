@@ -46,9 +46,21 @@ class MY_Controller extends CI_Controller
 		//邮箱环境设置
 		$config = [];
 
+		// $config['smtp_host'] = 'ssl://smtp.163.com';
+	 //    $config['smtp_user'] = 'safeexamclient@163.com';
+	 //    $config['smtp_pass'] = 'ZXPRQUATWJPKVMKY';
+	 //    $config['smtp_port'] = '465';
+	 //    $config['protocol'] = 'smtp';
+	 //    $config['smtp_timeout'] = 30;
+	 //    $config['charset'] = 'utf-8';
+	 //    $config['wordwrap'] = TRUE;
+	 //    $config['mailtype'] = 'html';
+	 //    $config['crlf'] = "\r\n";
+	 //    $config['newline'] = "\r\n";	
+
 	    $config['smtp_host'] = 'ssl://smtp.qq.com';
 	    $config['smtp_user'] = 'safeexamclient@foxmail.com';
-	    $config['smtp_pass'] = '********';   //公开场合密码隐藏 20210512 ChenGuang
+	    $config['smtp_pass'] = 'rsvabpoovdghcjcc'; 
 	    $config['smtp_port'] = '465';
 	    $config['protocol'] = 'smtp';
 	    $config['smtp_timeout'] = 30;

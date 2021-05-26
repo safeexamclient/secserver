@@ -36,7 +36,7 @@
           <br id="download">
           <h2 class="page-header">产品下载</h2>
           <p>点击下载： <strong><a href="http://dlcdn.safeexamclient.com/Safe_Exam_Client_CEF_2.1.3.zip">Safe_Exam_Client_2.1.3.zip</a></strong> 
-           （ 79 M，解压即用，免安装，支持 Win7/Win10，兼容Chrome和IE）</p>
+           （ 79 M，解压即用，免安装，支持 Win7/Win10，若是32位系统请点击 <a href="http://dlcdn.safeexamclient.com/Safe_Exam_Client_CEF_2.1.3_x86.zip">这里</a> ）</p>
           <!--
           <p>1.0 版本下载： <a href="https://github.com/safeexamclient/ie/releases/download/1.0.8/Safe_Exam_Client_IE_1.0.8.zip" style="color:#333">Safe_Exam_Client_1.0.8.zip</a>
             （ 283 K，解压即用，支持 WinXP及以上系统，仅兼容IE，已不再维护）</p>
