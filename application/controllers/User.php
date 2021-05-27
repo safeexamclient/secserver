@@ -154,7 +154,7 @@ class User extends MY_Controller {
 		if(!empty($user_info)){
         	$user_id = $user_info['user_id'];
         	$user_name = $user_info['user_name'];
-        	$new_pw = get_rand_str_lowerint(6); //得到6位的随机密码						
+        	$new_pw = get_rand_str_lowerint(8); //得到8位的随机密码						
         	$data['user_password'] = md5($new_pw); 
         	$update_result = $this->user_model->update( $user_id, $data ); 
 			if($update_result){
