@@ -137,7 +137,7 @@
           <p>If you are taking the exam at home or in the dormitory, in order to improve the safety of the exam, you need to perform the following operations  &nbsp;&nbsp; [ <strong><a href="/home/support#key"> View image </a></strong> ]</p>
           <ul>
             <li>1. Please <strong><a href="/user/signup"> register </a></strong> an enterprise account on this website</li>
-            <li>2. Log in to the background and create a new exam, the system will generate an exam password (6 digits) and notify the candidates (it is recommended to send it together with the original exam notification)</li>
+            <li>2. Log in to the background and create a new exam, the system will generate an exam password and notify the candidates (it is recommended to send it together with the original exam notification)</li>
             <li>3. Candidates download the software, double-click to run Exam.exe after decompression, and enter the password to enter the corresponding exam login interface</li>
           </ul>             
 
